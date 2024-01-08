@@ -1,0 +1,23 @@
+.playBox{
+    margin: auto;
+    display: block;
+}
+
+img{
+    height: 130px;
+    width: 170px;
+}
+button{
+    border-radius: 50%;
+    border: 1px;
+    overflow:hidden;
+    color: rgb(209, 29, 20);
+    height: 170px;
+    width: 190px;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
