@@ -22,10 +22,13 @@ body {
 }
 
 img {
+    cursor: pointer;
     height: 130px;
     width: 170px;
 }
-
+p{
+    text-align: center;
+}
 table,
 td,
 th {
