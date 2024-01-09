@@ -1,16 +1,46 @@
-.playBox{
-    margin: auto;
-    display: block;
+body {
+    background-color: rgb(64, 74, 71);
 }
 
-img{
+.playBox {
+    border-radius: 10px;
+    border: 2px solid rgb(171, 25, 25);
+    background-color: rgb(52, 118, 60);
+    display: block;
+    margin: auto;
+    width: 610px;
+    height: 400px;
+}
+
+.welcomeMsg {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(209, 161, 98);
+    width: auto;
+    height: 20px;
+
+}
+
+img {
     height: 130px;
     width: 170px;
 }
-button{
+
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+button {
     border-radius: 50%;
     border: 1px;
-    overflow:hidden;
+    overflow: hidden;
     color: rgb(209, 29, 20);
     height: 170px;
     width: 190px;

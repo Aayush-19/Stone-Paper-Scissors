@@ -1,5 +1,3 @@
-let body = document.querySelector("body");
-
 let paper = document.querySelector("#paper");
 let stone = document.querySelector("#stone");
 let scissor = document.querySelector("#scissor");
@@ -10,20 +8,20 @@ let turns = ['paper', 'scissor', 'stone'];
 //this block reads user input
 {
     paper.addEventListener("click", () => {
-        console.log("Paper was clicked");
+        // console.log("Paper was clicked");
         userInput = "paper";
         winner = findWinner();
 
     })
 
     scissor.addEventListener("click", () => {
-        console.log("Scissor was clicked");
+        // console.log("Scissor was clicked");
         userInput = "scissor";
         winner = findWinner();
     })
 
     stone.addEventListener("click", () => {
-        console.log("Stone was clicked");
+        // console.log("Stone was clicked");
         userInput = "stone";
         winner = findWinner();
     })
@@ -66,21 +64,25 @@ function displayWinner(winner) {
 //function to update score
 function updateScore(winner) {
     if (userInput !== '') {
+        console.log(winner);
         let result = document.createElement('h3');
-        if (winner === "Nobody")
+        result.innerText = `${winner} won this turn`;
+        if (winner === "NoBody") {
             result.innerText = "It's a draw";
-        else
-            result.innerText = `${winner} won this turn`;
-
-        if (winner === 'Computer') {
+            let drawn = document.querySelector("#drawScore");
+            let prev = parseInt(drawn.innerText);
+            drawn.innerText = prev + 1;
+        }
+        else if (winner === 'Computer') {
             let computerScorecard = document.querySelector("#computerScore");
             let prev = parseInt(computerScorecard.innerText);
             computerScorecard.innerText = prev + 1;
         }
-        else {
+        else if(winner==='User'){
             let userScorecard = document.querySelector("#userScore");
             let prev = parseInt(userScorecard.innerText);
             userScorecard.innerText = prev + 1;
         }
+
     }
 }
